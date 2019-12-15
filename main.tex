@@ -1,0 +1,37 @@
+\documentclass[oneside,12pt]{book}
+\input{Ancillary/Formatting_Prospectus.tex}
+%----------------------------------------------------------
+% Write the title and subtitle of the dissertation
+\newcommand{\TheTitle}{Title of the Dissertation}
+\newcommand{\TheSubtitle}{Subtitle}
+
+%----------------------------------------------------------
+\begin{document}
+
+% Document Information
+\input{Ancillary/Cover.tex}
+\pagenumbering{roman}
+\input{Ancillary/Layout_Abstract.tex} \clearpage
+\setcounter{page}{1} \pagenumbering{arabic}
+
+% Contents
+\chapter{Introduction} \label{cha:introduction}
+    \thispagestyle{empty}
+    \input{Sections/Introduction.tex} \clearpage
+\input{Essay_1.tex} \clearpage
+\input{Essay_2.tex} \clearpage
+\input{Essay_3.tex} \clearpage
+\chapter{Conclusion}
+    \input{Sections/Conclusion.tex} \clearpage
+
+% BIBLIOGRAPHY
+\bibliographystyle{apacite}
+\clearpage \bibliography{Ancillary/References.bib}
+
+% APPENDIX
+%\appendix \clearpage
+%\input{Appendix/File1.tex} \clearpage
+%\input{Appendix/File2.tex} \clearpage
+%\clearpage \thispagestyle{empty} \includepdf[landscape=true,pages=-,pagecommand={}]{Appendix/Timeline_Dissertation.pdf} \clearpage
+
+\end{document}

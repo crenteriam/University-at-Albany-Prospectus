@@ -1,0 +1,69 @@
+% Basic Packages -------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx,float,caption,comment,dirtytalk,verbatim}
+
+% Tables  --------------------------------------------------
+\usepackage{dcolumn,booktabs,multirow,threeparttable,tabularx,longtable,lscape}
+
+% Fonts  ---------------------------------------------------
+%\setsansfont{Roboto}
+%\setmonofont{Latin Modern Mono Light}
+
+% Layout  --------------------------------------------------
+\usepackage{lipsum}
+\usepackage{lscape,titling,rotating}
+%\setlength{\droptitle}{-9cm} % Title upper
+\usepackage[top=1.5in, bottom=1.5in, left=1.5in, right=1.5in]{geometry} % Margins
+\usepackage{pdfpages}    % Include PDF as additional page(s) (used for Timeline Table).
+\usepackage{pdflscape}   % Supports lscape environment on pdfpages package.
+
+    % Formatting the Chapter titles
+    \usepackage{titlesec}
+    \titleformat{\chapter}[hang]
+    {\normalfont\LARGE\bfseries}{\thechapter.}{1em}{\Large}
+    \titlespacing*{\chapter}{0pt}{-60pt}{0.5cm}
+
+% Proofreading  --------------------------------------------
+\usepackage{fontspec}
+%\setmainfont{Latin Modern Mono Light}     % Proofreading Font Type.
+\renewcommand{\baselinestretch}{1.2}      % Edit line spacing
+%\usepackage{setspace} \doublespacing      % Set double spacing
+%\usepackage{lineno} \linenumbers          % Add line numbers
+
+% Aesthetics ----------------------------------------------
+\usepackage{xcolor}
+\definecolor{carmine}{rgb}{0.59, 0.0, 0.09}      % Carmine
+\definecolor{ultramarine}{rgb}{0.07, 0.04, 0.56} % Ultramarine
+\renewcommand\thefootnote{\textcolor{carmine}{\arabic{footnote}}} % foot note color carmine
+\renewcommand{\labelitemi}{$\circ$}                               % Bullet points as empty circles
+\usepackage[colorlinks=true,linkcolor=carmine,urlcolor=ultramarine,citecolor=ultramarine]{hyperref}
+
+% Headers and Footers  ------------------------------------
+\usepackage{fancyhdr}
+% Set and edit Fancy Headers environment.
+\pagestyle{fancy} \fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}} % Chapter Title displayed in right and left header marks.
+\renewcommand{\sectionmark}[1]{{\chaptermark}}    % Section mark replaced by chapter mark.
+\renewcommand{\headrulewidth}{0.5pt}              % Set width of header rule
+\fancyhead[RE,RO]{\thepage}                       % Page number displayed at the right (in RE even and RO odd pages)
+\fancyhead[LE,LO]{\leftmark}                      % Chapter name displayed at the left (in LE even and LO odd pages)
+
+%\fancyhead[CO,CE]{Draft}      % Text in the Header
+%\fancyfoot[C]{Draft}          % Text in the Footer
+%\fancyfoot[RO, LE] {\thepage} % Page number in footer
+
+% Bibliography management  -------------------------------
+\usepackage{apacite}  % APA citation style. (use apacite after packge hyperref to avoid errors).
+
+    % Enumerate references
+    %\setlength{\biblabelsep}{0.3em} % Define blank space between number and reference.
+    %\newcounter{MyBibCount}
+    %\makeatletter
+    %\renewcommand{\@biblabel}[1]{\stepcounter{MyBibCount}\theMyBibCount.}
+    %\makeatother
+
+% Troubleshooting  ---------------------------------------
+\usepackage[babel]{csquotes} \MakeOuterQuote{"}                     % Display correct quotation marks
+\usepackage{url} \def\UrlBreaks{\do\/\do-}                          % Break URLs into several lines (when necessary)
+\newcommand{\therule}{\noindent\rule{\textwidth}{1pt} \vspace{2 pt}} % Make a horizontal line.
